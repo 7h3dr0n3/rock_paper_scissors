@@ -1,7 +1,5 @@
 
 const p = document.getElementById('compChoice');
-p.textContent = getComputerChoice();
-
 
 function getComputerChoice() {
     const randomNumber = Math.floor((Math.random() * 3) + 1);
@@ -15,3 +13,23 @@ function getComputerChoice() {
     }
 }
 
+function singleRound(playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = computerSelection.toLowerCase();
+    if (playerSelection === "rock" && computerSelection === "scissors") {
+        console.info(playerSelection, computerSelection);
+        return "You Lose! Paper beats Rock";
+    } else if (playerSelection === "paper" && computerSelection === "rock") {
+        console.info(playerSelection, computerSelection);
+        return "You Lose! Paper beats Rock";
+    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+        console.info(playerSelection, computerSelection);
+        return "You Lose! Paper beats Rock";
+    } else {
+        return "Play Again";
+    }
+}
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(singleRound(playerSelection, computerSelection));
