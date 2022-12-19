@@ -1,16 +1,17 @@
 
 const p = document.getElementById('compChoice');
+p.textContent = getComputerChoice();
+
 
 function getComputerChoice() {
     const randomNumber = Math.floor((Math.random() * 3) + 1);
 
     if (randomNumber == 1) {
-        p.textContent = "Rock";
+        return "Rock";
     } else if (randomNumber == 2) {
-        p.textContent = "Paper";
+        return "Paper";
     } else {
-        p.textContent = "Scissors";
+        return "Scissors";
     }
 }
 
-getComputerChoice();
